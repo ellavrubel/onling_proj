@@ -10,6 +10,8 @@ html {
 }
 
 body {
+  font-family: "TTNorms-Regular", sans-serif;
+  font-weight: 400;
   overflow-x: hidden;
 }
 
@@ -23,9 +25,14 @@ p {
   padding: 0;
 }
 
-input {
+input, button, textarea {
   border: none;
-  outline: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -4073,12 +4080,219 @@ template {
   animation-name: slideOutUp;
 }
 
+@font-face {
+  font-family: "OrchideaPro-Light", sans-serif;
+  src: url("../fonts/OrchideaPro-Light.woff2") format("woff2"), url("../fonts/OrchideaPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTNorms-Regular", sans-serif;
+  src: url("../fonts/TTNorms-Regular.woff2") format("woff2"), url("../fonts/TTNorms-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTNorms-Medium", sans-serif;
+  src: url("../fonts/TTNorms-Medium.woff2") format("woff2"), url("../fonts/TTNorms-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.form__btn, .form__title {
+  font-family: "TTNorms-Medium", sans-serif;
+  font-weight: 500;
+}
+
 .header__title {
+  text-align: center;
+  margin: 0;
   font-size: 257px;
   line-height: 120.5%;
   background: linear-gradient(100deg, #2569AC 0%, #4CBA85 56.89%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.wrapper {
+  background-color: #333;
+  padding: 50px;
+}
+
+.form {
+  max-width: 550px;
+  color: #fff;
+  margin: 0 auto;
+}
+.form * {
+  outline: none;
+}
+.form__title {
+  font-size: 40px;
+}
+.form__item {
+  margin: 0 0 20px 0;
+}
+.form__label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+.form__input {
+  height: 50px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.form .options {
+  padding-top: 10px;
+}
+.form .options__item {
+  margin-bottom: 10px;
+}
+.form .options__input {
+  display: none;
+}
+.form .options__input:checked + .options__label::after {
+  transform: scale(1);
+}
+.form .options__label {
+  font-size: 16px;
+  display: inline-flex;
+  line-height: 140%;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.form .options__label::before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.form .options__label::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  background-color: #7a956b;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all ease 0.3s;
+}
+.form .options__label span {
+  min-width: 250px;
+  padding-left: 10px;
+}
+.form .select {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px 10px 10px 20px;
+}
+.form .file__item {
+  position: relative;
+}
+.form .file__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.form .file__btn {
+  display: inline-flex;
+  min-height: 40px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 86, 21, 0.96);
+  padding: 5px 20px;
+  margin: 10px 0;
+}
+.form .file__preview {
+  display: inline-block;
+  max-width: 100px;
+  padding-top: 10px;
+}
+.form .file__preview img {
+  max-width: 100%;
+}
+.form .checkbox__input {
+  display: none;
+}
+.form .checkbox__input:checked + .checkbox__label::after {
+  transform: scale(1);
+}
+.form .checkbox__label {
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.form .checkbox__label a {
+  color: #7a956b;
+}
+.form .checkbox__label::before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.form .checkbox__label::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #7a956b;
+  border-radius: 4px;
+  transform: scale(0);
+  transition: all ease 0.3s;
+}
+.form__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  background-color: #7a956b;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-shadow: 0 5px 0 rgba(11, 17, 17, 0.71);
+  transition: background-color ease 0.6s;
+  position: relative;
+  top: 0;
+}
+.form__btn:hover {
+  background-color: #345829;
+}
+.form__btn:active {
+  top: 3px;
+  box-shadow: 0 2px 0 #040505;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,1 +1,1 @@
-html{box-sizing:border-box;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{overflow-x:hidden}a{text-decoration:none;cursor:pointer}p{margin:0;padding:0}input{border:none;outline:none}
+html{box-sizing:border-box;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{font-family:"TTNorms-Regular", sans-serif;font-weight:400;overflow-x:hidden}a{text-decoration:none;cursor:pointer}p{margin:0;padding:0}input,button,textarea{border:none;cursor:pointer}h1,h2,h3,h4,h5,h6{padding:0;margin:0}

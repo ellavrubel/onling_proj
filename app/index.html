@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Onling</title>
+    <title>Useful Features</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -14,17 +14,86 @@
     <h1 class="header__title">
         Onling
     </h1>
-    <p class="header__text">
-        The voice of tomorrow
-    </p>
 </header>
 <!---->
 
 <!-- Email form-->
 
+<div class="wrapper">
+    <div class="form">
+        <form action="#" id="form" class="form__body">
 
+            <h1 class="form__title">
+                Sending data on email
+            </h1>
+            
+            <div class="form__item">
+                <label class="form__label" for="formName" >  Name*: </label>
+                <input id="formName" class="form__input" type="text" name="name">
+            </div>
 
+            <div class="form__item">
+                <label class="form__label" for="formEmail" >  E-mail*: </label>
+                <input id="formEmail" class="form__input" type="email" name="email">
+            </div>
 
+            <div class="form__item">
+                <div class="form__label">
+                    Are you left-handed or right-handed type of person?
+                </div>
+                <div class="options">
+                    <div class="options__item">
+                        <input id="formRightHanded" class="options__input" checked value="right" type="radio" name="hand">
+                        <label for="formRightHanded" class="options__label"> <span>Right-handed</span>
+                        </label>
+                    </div>
+                    <div class="options__item">
+                        <input id="formLeftHanded" class="options__input" value="left" type="radio" name="hand">
+                        <label for="formLeftHanded" class="options__label"> <span>Left-handed</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__item">
+                <label for="formMessage" class="form__label"> Message: </label>
+                <textarea id="formMessage" class="form__input" name="message"></textarea>
+            </div>
+
+            <div class="form__item">
+                <label for="ageSelect" class="form__label"> Age: </label>
+                <select id="ageSelect" class="select" name="age">
+                    <option class="select__option" value="from 18 to 25"> Young </option>
+                    <option class="select__option" value="from 25 to 50"> Middle age </option>
+                    <option class="select__option" value="from 50 +"> Supper age </option>
+                </select>
+            </div>
+
+            <div class="form__item">
+                <div class="form__label"> Photo attachment*: </div>
+                <div class="file">
+                    <div class="file__item">
+                        <input id="formImage" class="file__input" type="file" name="image" accept=".jpg, .png, .gif">
+                        <div class="file__btn"> Choose File</div>
+                        <div class="file__preview"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__item">
+                <div class="checkbox">
+                    <input id="formAgreement" class="checkbox__input" type="checkbox" name="agreement" checked>
+                    <lable class="checkbox__label" for="formAgreement">
+                        <span>I agree to the assessment, use and processing of my personal data. I've red <a href="#">Terms and Conditions.</a>*</span>
+                    </lable>
+                </div>
+            </div>
+
+            <button class="form__btn" type="submit"> Send</button>
+
+        </form>
+    </div>
+</div>
 
 <!---->
 
