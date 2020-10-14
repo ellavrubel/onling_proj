@@ -1,0 +1,23 @@
+@import "global.scss";
+@import "libs.scss";
+
+
+
+// gradient colored text
+
+ .header {
+
+   &__title{
+     font-size: 257px;
+     line-height: 120.5%;
+     background: linear-gradient(100deg, #2569AC 0%, #4CBA85 56.89%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+   }
+ }
+
+//
+
+
+
+
