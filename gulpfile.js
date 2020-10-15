@@ -26,8 +26,7 @@ gulp.task('scss', function () {
 
 gulp.task('css', function () {
     return gulp.src([
-        'node_modules/normalize.css/normalize.css',
-        'node_modules/animate.css/animate.css'
+        'node_modules/normalize.css/normalize.css'
     ])
         .pipe(concat('libs.scss'))
         .pipe(gulp.dest('app/scss'))

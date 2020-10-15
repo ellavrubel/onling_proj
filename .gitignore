@@ -1,2 +1,8 @@
 /idea/
 /node_modules/
+.idea/.gitignore
+.idea/art_repair.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/watcherTasks.xml
