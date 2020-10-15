@@ -441,9 +441,15 @@ template {
   border-radius: 5px;
   font-size: 18px;
 }
+.form__input:focus {
+  box-shadow: 0 0 15px #7a956b;
+}
 .form textarea {
   min-height: 120px;
   resize: vertical;
+}
+.form textarea:focus {
+  box-shadow: 0 0 15px #7a956b;
 }
 .form .options {
   padding-top: 10px;
@@ -496,6 +502,9 @@ template {
   font-size: 18px;
   padding: 10px 10px 10px 20px;
 }
+.form .select:focus {
+  box-shadow: 0 0 15px #7a956b;
+}
 .form .file__item {
   position: relative;
 }
@@ -508,6 +517,9 @@ template {
   font-size: 0;
   opacity: 0;
   cursor: pointer;
+}
+.form .file__input:focus {
+  box-shadow: 0 0 15px #7a956b;
 }
 .form .file__btn {
   display: inline-flex;

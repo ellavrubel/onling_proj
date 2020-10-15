@@ -59,11 +59,20 @@
       padding: 20px;
       border-radius: 5px;
       font-size: 18px;
+
+      &:focus{
+        box-shadow: 0 0 15px #7a956b;
+      }
     }
 
     textarea{
       min-height: 120px;
       resize: vertical;
+
+      &:focus{
+        box-shadow: 0 0 15px #7a956b;
+      }
+
     }
 
     .options{
@@ -127,6 +136,10 @@
       border-radius: 5px;
       font-size: 18px;
       padding: 10px 10px 10px 20px;
+
+      &:focus{
+        box-shadow: 0 0 15px #7a956b;
+      }
     }
 
     .file{
@@ -144,6 +157,10 @@
         font-size: 0;
         opacity: 0;
         cursor: pointer;
+
+        &:focus{
+          box-shadow: 0 0 15px #7a956b;
+        }
       }
 
       &__btn{
