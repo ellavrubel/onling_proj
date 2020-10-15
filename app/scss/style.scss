@@ -171,7 +171,7 @@
     .checkbox{
 
       &__input{
-        display: none;
+        display:none;
 
         &:checked + .checkbox__label::after{
           transform: scale(1);
