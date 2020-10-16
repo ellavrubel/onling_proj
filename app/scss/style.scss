@@ -65,6 +65,11 @@
       }
     }
 
+    &__input._email._error,
+    &__input._error{
+        box-shadow: 0 0 15px #ff6450;
+    }
+
     textarea{
       min-height: 120px;
       resize: vertical;
@@ -231,6 +236,10 @@
         }
       }
 
+    }
+
+    .checkbox._error .checkbox__label:before {
+      box-shadow: 0 0 15px #ff6450;
     }
 
     &__btn{

@@ -1,37 +1,39 @@
-html {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+  html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 
-body{
-  font-family:"TTNorms-Regular", sans-serif;
-  font-weight: 400;
-  overflow-x: hidden;
-}
+  body{
+    font-family:"TTNorms-Regular", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
 
-a{
-  text-decoration: none;
-  cursor: pointer;
-}
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-p{
-  margin: 0;
-  padding: 0;
-}
-input, button, textarea{
-  border: none;
-  cursor: pointer;
-}
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  input, button, textarea{
+    border: none;
+    cursor: pointer;
+  }
 
-h1,h2,h3,h4,h5,h6{
-  padding: 0;
-  margin: 0;
-}
+  h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+  }
+
+
 
 //.visually-hidden{
 //  position: absolute;

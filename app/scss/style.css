@@ -444,6 +444,9 @@ template {
 .form__input:focus {
   box-shadow: 0 0 15px #7a956b;
 }
+.form__input._email._error, .form__input._error {
+  box-shadow: 0 0 15px #ff6450;
+}
 .form textarea {
   min-height: 120px;
   resize: vertical;
@@ -576,6 +579,9 @@ template {
   border-radius: 4px;
   transform: scale(0);
   transition: all ease 0.3s;
+}
+.form .checkbox._error .checkbox__label:before {
+  box-shadow: 0 0 15px #ff6450;
 }
 .form__btn {
   width: 100%;
