@@ -17,8 +17,31 @@
              e.preventDefault();
 
              let error = formValidate(form);
+             let formData = new FormData (form);
+             formData.append('image', formImage[0]);
 
              if (error === 0){
+
+                 form.classList.add('_sending');
+
+                 let response = await fetch ('sendmail.php', {
+                     method: 'POST',
+                     body: formData
+                 });
+
+                 if (response.ok){
+
+                     let result = await response.json();
+                     alert(result.message);
+                     formPreview.innerHTML = '';
+                     form.reset();
+                     form.classList.remove('_sending');
+
+
+                 } else {
+                     alert('an error occurred');
+                     form.classList.remove('_sending');
+                 }
 
              } else {
                  alert ('Fill required fields!');
@@ -47,6 +70,10 @@
                          error++;
 
                      }
+                     if (input.value === ''){
+                         formAddError(input);
+                         error++;
+                     }
 
                  }
                     else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
@@ -62,6 +89,7 @@
                      }
 
                  }
+
                }
 
                     return error;
@@ -129,6 +157,19 @@
              }
 
          //
+
+             let reader = new FileReader();
+
+             reader.onload = function (e) {
+                 formPreview.innerHTML = `<img src = "${e.target.result}" alt="Photo">`;
+             };
+
+             reader.onerror = function (e) {
+                 alert ('en error occurred');
+             };
+
+             reader.readAsDataURL(file);
+
          }
 
      //
